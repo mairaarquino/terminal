@@ -1,7 +1,7 @@
 <template>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <div class="container">
       <div class="menu">
         <div class="buttons-flex">
@@ -63,10 +63,11 @@
         const value = this.$refs.input.value;
         if (value === "help") {
           this.trueValue(value);
-          this.createCode("projects", "Meu github com alguns dos meus projetos. Me segue lá ;)");
-          this.createCode("about", "Oque eu faço e quem sou eu?");
-          this.createCode("social", "Minha redes sociais");
-          this.createCode("clear, clean", "Limpar o terminal.");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">projects:</p>`, "Meu github com alguns dos meus projetos. Me segue lá ;)");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">about:</p>`, "Oque eu faço e quem sou eu?");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">skills:</p>`, "Minhas habilidades e competencias tecnicas.");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">social:</p>`, "Minha redes sociais");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">clean/clear:</p>`, "Limpar o terminal.");
         } else if (value === "projects") {
           this.trueValue(value);
           this.createCode(`<a href='https://github.com/mairaarquino' target='_blank'>https://github.com/mairaarquino</a>`);
@@ -74,7 +75,12 @@
           this.trueValue(value);
           this.createText("Oi meu nome é Maíra Arquino :)");
           this.createText('Sou Desenvolvedora Back-end Sênior & Teach Lead, especializada no ecosistema node, com foco no desenvolvimento de APIS.');
-        } else if (value === "social") {
+        } else if (value === "skills") {
+          this.trueValue(value);
+          this.createText("Minhas hablidades:");
+          this.createText('Node.js, Javascript, Typescript, PHP, NestJs, Banco de dados, Microsserviços, Serverless, Cloud, Design Patterns, Clean Architecture, Git.');
+        }
+         else if (value === "social") {
           this.trueValue(value);
           this.createCode(`<a href='https://github.com/mairaarquino' target='_blank'>https://github.com/mairaarquino</a>`);
           this.createCode(`<a href='https://www.linkedin.com/in/mairaarquino/' target='_blank'>https://www.linkedin.com/in/mairaarquino/</a>`);
@@ -94,7 +100,7 @@
             text = code
         this.lines.push({ type: "code", content: `${code}` });
         } else {
-            this.lines.push({ type: "code", content: `${code} <br/><span class='text'> ${text} </span>` });
+            this.lines.push({ type: "code", content: `${code} <span class='text'> ${text} </span>` });
         }
       },
       trueValue(value) {
@@ -122,9 +128,8 @@
       margin:0;
       padding:0;
       box-sizing: border-box;
-      font-family: 'Roboto Slab', serif;
+      font-family: "Fira Code", monospace;
       font-size: 18px !important;
-      font-family: "Source Code Pro", monospace;
         font-optical-sizing: auto;
         font-style: normal;
   }
@@ -193,6 +198,12 @@
     margin: 0 auto;
     cursor: text;
   }
+  .code{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
   .menu{
     display:flex;
     align-items: center;

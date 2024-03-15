@@ -67,6 +67,7 @@
           this.createCode(`<p style="color:rgb(254, 193, 52)">about:</p>`, "Oque eu faço e quem sou eu?");
           this.createCode(`<p style="color:rgb(254, 193, 52)">skills:</p>`, "Minhas habilidades e competencias tecnicas.");
           this.createCode(`<p style="color:rgb(254, 193, 52)">social:</p>`, "Minha redes sociais");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">passions:</p>`, "Meus hobbies e paixões.");
           this.createCode(`<p style="color:rgb(254, 193, 52)">clean/clear:</p>`, "Limpar o terminal.");
         } else if (value === "projects") {
           this.trueValue(value);
@@ -74,11 +75,15 @@
         } else if (value === "about") {
           this.trueValue(value);
           this.createText("Oi meu nome é Maíra Arquino :)");
-          this.createText('Sou Desenvolvedora Back-end Sênior & Teach Lead, especializada no ecosistema node, com foco no desenvolvimento de APIS.');
+          this.createText('Sou Desenvolvedora Back-end Sênior & Tech Lead, Com seis anos de experiência no mundo do desenvolvimento, posso dizer que já vi de tudo um pouco e aprendi muito pelo caminho. Meu forte são Node.js e PHP, adoro desafios técnicos e resolver problemas complicados, cada projeto é uma oportunidade emocionante de aprender algo novo. Como Tech Lead, estou sempre disposta a compartilhar meu conhecimento e ajudar meus colegas a crescerem profissionalmente.');
         } else if (value === "skills") {
           this.trueValue(value);
           this.createText("Minhas hablidades:");
           this.createText('Node.js, Javascript, Typescript, PHP, NestJs, Banco de dados, Microsserviços, Serverless, Cloud, Design Patterns, Clean Architecture, Git.');
+        } else if (value === "passions") {
+          this.trueValue(value);
+          this.createText("Meus hobbies e paixões:");
+          this.createText('Livros, Gatos, Cães, Café, Música, Praia e Viagens.');
         }
          else if (value === "social") {
           this.trueValue(value);
@@ -88,7 +93,7 @@
           this.lines = [];
         } else {
           this.falseValue(value);
-          this.createText(`comando não encontrado: ${value}, use 'help' para ver todos os comandos.`);
+          this.createText(`Comando não encontrado: ${value}, use 'help' para ver todos os comandos.`);
         }
         this.$refs.input.value = '';
       },

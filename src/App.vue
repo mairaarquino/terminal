@@ -67,8 +67,8 @@
           this.createCode(`<p style="color:rgb(254, 193, 52)">about:</p>`, "Oque eu faço e quem sou eu?");
           this.createCode(`<p style="color:rgb(254, 193, 52)">skills:</p>`, "Minhas habilidades e competencias tecnicas.");
           this.createCode(`<p style="color:rgb(254, 193, 52)">social:</p>`, "Minha redes sociais");
-          this.createCode(`<p style="color:rgb(254, 193, 52)">passions:</p>`, "Meus hobbies e paixões.");
-          this.createCode(`<p style="color:rgb(254, 193, 52)">clean/clear:</p>`, "Limpar o terminal.");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">hobbies:</p>`, "Meus hobbies e paixões.");
+          this.createCode(`<p style="color:rgb(254, 193, 52)">clean:</p>`, "Limpar o terminal.");
         } else if (value === "projects") {
           this.trueValue(value);
           this.createCode(`<a href='https://github.com/mairaarquino' target='_blank'>https://github.com/mairaarquino</a>`);
@@ -80,7 +80,7 @@
           this.trueValue(value);
           this.createText("Minhas hablidades:");
           this.createText('Node.js, Javascript, Typescript, PHP, NestJs, Banco de dados, Microsserviços, Serverless, Cloud, Design Patterns, Clean Architecture, Git.');
-        } else if (value === "passions") {
+        } else if (value === "hobbies") {
           this.trueValue(value);
           this.createText("Meus hobbies e paixões:");
           this.createText('Livros, Gatos, Cães, Café, Música, Praia e Viagens.');
@@ -89,7 +89,7 @@
           this.trueValue(value);
           this.createCode(`<a href='https://github.com/mairaarquino' target='_blank'>https://github.com/mairaarquino</a>`);
           this.createCode(`<a href='https://www.linkedin.com/in/mairaarquino/' target='_blank'>https://www.linkedin.com/in/mairaarquino/</a>`);
-        } else if (value === "clear" || "clean") {
+        } else if (value === "clean") {
           this.lines = [];
         } else {
           this.falseValue(value);

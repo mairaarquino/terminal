@@ -66,7 +66,7 @@
           this.createCode("projects", "Meu github com alguns dos meus projetos. Me segue lá ;)");
           this.createCode("about", "Oque eu faço e quem sou eu?");
           this.createCode("social", "Minha redes sociais");
-          this.createCode("clear", "Limpar o terminal.");
+          this.createCode("clear, clean", "Limpar o terminal.");
         } else if (value === "projects") {
           this.trueValue(value);
           this.createCode(`<a href='https://github.com/mairaarquino' target='_blank'>https://github.com/mairaarquino</a>`);
@@ -78,7 +78,7 @@
           this.trueValue(value);
           this.createCode(`<a href='https://github.com/mairaarquino' target='_blank'>https://github.com/mairaarquino</a>`);
           this.createCode(`<a href='https://www.linkedin.com/in/mairaarquino/' target='_blank'>https://www.linkedin.com/in/mairaarquino/</a>`);
-        } else if (value === "clear") {
+        } else if (value === "clear" || "clean") {
           this.lines = [];
         } else {
           this.falseValue(value);
